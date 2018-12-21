@@ -56,6 +56,10 @@ body {
   align-items: center;
 }
 
+.output div .todo {
+  font-size: 1.2em;
+}
+
 .output div .box {
   background-image: url("box.png");
   background-size: 30px;
