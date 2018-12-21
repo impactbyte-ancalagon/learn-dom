@@ -18,6 +18,8 @@ const submitGuestData = event => {
   }
 
   displayToList(data)
+  displayToPre(data)
+  displayToConsole(data)
 }
 
 const displayToConsole = data => {
