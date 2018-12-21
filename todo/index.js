@@ -58,8 +58,8 @@ const display = () => {
         </span>
       </div>
       <div class="actions">
-        <span class="action edit">Edit</span>
-        <span class="action delete">Delete</span>
+        <span class="action edit" onclick="edit(${index})">Edit</span>
+        <span class="action remove" onclick="remove(${index})">Delete</span>
       </div>
     </div>`
   })
@@ -81,6 +81,26 @@ const complete = indexToCheck => {
 
   save(DATA_NEW)
   display()
+}
+
+// -----------------------------------------------------------------------------
+
+const remove = indexToRemove => {
+  // Load latest data from localStorage
+  const DATA = load()
+
+  // If the todo index is matched with the clicked one,
+  // the todo will be deleted
+  const DATA_NEW = DATA.filter((item, index) => {
+    if (index !== indexToRemove) return item
+  })
+
+  save(DATA_NEW)
+  display()
+}
+
+const edit = indexToEdit => {
+  console.log(indexToEdit)
 }
 
 // -----------------------------------------------------------------------------
