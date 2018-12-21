@@ -20,6 +20,9 @@ a {
 .app {
   width: 600px;
   background-color: hsl(0, 0%, 100%);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .header {
@@ -72,6 +75,9 @@ a {
 
 .output {
   margin: 4px;
+  flex: 1;
+  height: 300px;
+  overflow-y: scroll;
 }
 
 .output div {

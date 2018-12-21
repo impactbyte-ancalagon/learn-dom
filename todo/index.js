@@ -1,6 +1,8 @@
 const formInput = document.getElementById("input")
 const output = document.getElementById("output")
 const buttonClear = document.getElementById("button-clear")
+const formSearch = document.getElementById("search")
+const searchTodo = document.getElementById("search-todo")
 
 // -----------------------------------------------------------------------------
 
@@ -37,12 +39,10 @@ const submit = event => {
 // -----------------------------------------------------------------------------
 
 // Display todos in the output area
-const display = () => {
+// Also load latest data from localStorage by default
+const display = (DATA = load()) => {
   // Empty out the output area
   output.innerHTML = ""
-
-  // Load latest data from localStorage
-  const DATA = load()
 
   // Loop over the array of objects
   // Put them into <ul> output as multiple <div>
@@ -98,6 +98,8 @@ const remove = indexToRemove => {
   display()
 }
 
+// -----------------------------------------------------------------------------
+
 const edit = indexToEdit => {
   const DATA = load()
 
@@ -107,7 +109,9 @@ const edit = indexToEdit => {
   // If the todo index is matched with the clicked one,
   // the todo will available to edit
   const DATA_NEW = DATA.map((item, index) => {
-    if (index === indexToEdit) item.text = newText
+    if (index === indexToEdit) {
+      item.text = newText
+    }
     return item
   })
 
@@ -117,9 +121,31 @@ const edit = indexToEdit => {
 
 // -----------------------------------------------------------------------------
 
+const search = event => {
+  const searchTodoValue = event.target.value.toLowerCase()
+
+  if (searchTodoValue.trim() !== "") {
+    const DATA = load()
+
+    // Filter for the searched text
+    const filteredData = DATA.filter(item => {
+      if (item.text.toLowerCase().includes(searchTodoValue)) {
+        return item
+      }
+    })
+
+    display(filteredData)
+  } else {
+    display()
+  }
+}
+
+// -----------------------------------------------------------------------------
+
 // Listen for submit event in the form
 formInput.addEventListener("submit", submit)
 buttonClear.addEventListener("click", clear)
+searchTodo.addEventListener("keyup", search)
 
 // -----------------------------------------------------------------------------
 
