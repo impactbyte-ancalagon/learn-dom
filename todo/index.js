@@ -86,7 +86,6 @@ const complete = indexToCheck => {
 // -----------------------------------------------------------------------------
 
 const remove = indexToRemove => {
-  // Load latest data from localStorage
   const DATA = load()
 
   // If the todo index is matched with the clicked one,
@@ -100,7 +99,20 @@ const remove = indexToRemove => {
 }
 
 const edit = indexToEdit => {
-  console.log(indexToEdit)
+  const DATA = load()
+
+  // Ask user to input the new todo text
+  const newText = prompt(`Edit '${DATA[indexToEdit].text}':`)
+
+  // If the todo index is matched with the clicked one,
+  // the todo will available to edit
+  const DATA_NEW = DATA.map((item, index) => {
+    if (index === indexToEdit) item.text = newText
+    return item
+  })
+
+  save(DATA_NEW)
+  display()
 }
 
 // -----------------------------------------------------------------------------
