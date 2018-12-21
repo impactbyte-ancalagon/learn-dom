@@ -20,5 +20,17 @@ const clear = () => {
   display()
 }
 
+// Initialize first todos
+const INITIAL_DATA = [
+  {
+    text: "Initial todo",
+    completed: true
+  }
+]
+
 // Get the data once from localStorage
 const DATA = load()
+
+if (DATA[0] === undefined) {
+  save(INITIAL_DATA)
+}

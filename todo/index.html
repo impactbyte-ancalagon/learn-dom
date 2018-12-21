@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div id="container">
+    <main id="container">
       <header id="header" class="header">
         <h1 id="title" class="title">Todo</h1>
       </header>
@@ -19,16 +19,14 @@
           id="input-todo"
           class="input-todo"
           type="text"
-          placeholder="Insert your todo"
+          placeholder="What do you want to do?"
         />
         <input id="input-add" class="button" type="submit" value="Add" />
         <input id="button-clear" class="button" type="button" value="Clear" />
       </form>
 
-      <ul id="output">
-        <!-- OUTPUT -->
-      </ul>
-    </div>
+      <section id="output" class="output"><!-- OUTPUT --></section>
+    </main>
 
     <script src="data.js"></script>
     <script src="index.js"></script>

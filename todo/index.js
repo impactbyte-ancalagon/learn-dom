@@ -41,9 +41,14 @@ const display = () => {
   const DATA = load()
 
   // Loop over the array of objects
-  // Put them into <ul> output as multiple <li>
+  // Put them into <ul> output as multiple <div>
   DATA.forEach(item => {
-    output.innerHTML += `<li>${item.text}</li>`
+    output.innerHTML += `<div>
+      <div class="box ${item.completed ? "completed" : ""}"></div>
+      <span class="todo-text">
+        ${item.text}
+      </span>
+    </div>`
   })
 }
 

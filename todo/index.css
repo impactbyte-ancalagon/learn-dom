@@ -1,22 +1,37 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 }
 
 .header {
   background: hsl(0, 0%, 0%);
-  padding: 5px 20px;
+  padding: 20px 0;
   margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .title {
   color: hsl(58, 100%, 50%);
   margin: 0;
+  font-size: 2.2em;
+}
+
+.input {
+  background: hsl(0, 0%, 93%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .input-todo {
-  padding: 10px;
   background: hsl(0, 0%, 93%);
+  flex: 1;
+  padding: 10px;
   border: 0;
+  width: 400px;
+  padding: 20px;
+  font-size: 1.1em;
 }
 
 .button {
@@ -24,7 +39,39 @@ body {
   color: hsl(58, 100%, 50%);
   border-radius: 5px;
   border: 0;
-  padding: 4px 6px;
+  padding: 8px 12px;
+  margin: 6px;
   font-weight: 800;
   text-transform: uppercase;
+  font-size: 1.1em;
+}
+
+.output {
+  margin: 4px;
+}
+
+.output div {
+  padding: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.output div .box {
+  background-image: url("box.png");
+  background-size: 30px;
+  background-repeat: no-repeat;
+  height: 30px;
+  min-width: 30px;
+  padding: 0;
+  margin: 0;
+  margin-right: 13px;
+  border: 0;
+  cursor: pointer;
+}
+
+.output div .box.completed {
+  background-image: url("box-completed.png");
+  background-size: 39px 30px;
+  margin-right: 4px;
+  min-width: 39px;
 }
