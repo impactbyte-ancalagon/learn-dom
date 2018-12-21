@@ -59,7 +59,7 @@ const display = () => {
       </div>
       <div class="actions">
         <span class="action edit" onclick="edit(${index})">Edit</span>
-        <span class="action remove" onclick="remove(${index})">Delete</span>
+        <span class="action remove" onclick="remove(${index})">Remove</span>
       </div>
     </div>`
   })
