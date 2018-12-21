@@ -17,6 +17,7 @@ const load = () => {
 // Clear todos from localStorage
 const clear = () => {
   window.localStorage.removeItem("todos")
+  display()
 }
 
 // Get the data once from localStorage
