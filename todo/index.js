@@ -1,5 +1,6 @@
 const formInput = document.getElementById("input")
 const output = document.getElementById("output")
+const buttonClear = document.getElementById("button-clear")
 
 // Handle form on submit, when user entering a new todo
 const submit = event => {
@@ -45,6 +46,7 @@ const display = () => {
 
 // Listen for submit event in the form
 formInput.addEventListener("submit", submit)
+buttonClear.addEventListener("click", clear)
 
 // Display all todos once in the beginning
 display()

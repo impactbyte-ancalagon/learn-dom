@@ -19,7 +19,7 @@ body {
   border: 0;
 }
 
-.input-add {
+.button {
   background: hsl(0, 0%, 0%);
   color: hsl(58, 100%, 50%);
   border-radius: 5px;
