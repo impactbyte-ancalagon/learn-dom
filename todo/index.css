@@ -72,6 +72,7 @@ body {
 
 .output div .todo {
   font-size: 1.2em;
+  flex: 1;
 }
 
 .output div .box {
@@ -92,4 +93,20 @@ body {
   background-size: 39px 30px;
   margin-right: 4px;
   min-width: 39px;
+}
+
+.text {
+  letter-spacing: 1px;
+}
+
+.action {
+  text-transform: uppercase;
+  font-weight: 800;
+  margin: 0 5px;
+  cursor: pointer;
+  color: hsl(0, 0%, 80%);
+}
+
+.action:hover {
+  color: hsl(0, 0%, 20%);
 }

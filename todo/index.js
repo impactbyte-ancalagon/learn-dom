@@ -47,11 +47,20 @@ const display = () => {
   // Loop over the array of objects
   // Put them into <ul> output as multiple <div>
   DATA.forEach((item, index) => {
-    output.innerHTML += `<div onclick="complete(${index})">
-      <div class="box ${item.completed ? "completed" : ""}"></div>
-      <span class="todo">
-        ${item.text}
-      </span>
+    output.innerHTML += `<div class="item"">
+      <div class="todo">
+        <div
+          onclick="complete(${index})" 
+          class="box ${item.completed ? "completed" : ""}">
+        </div>
+        <span class="text">
+          ${item.text}
+        </span>
+      </div>
+      <div class="actions">
+        <span class="action edit">Edit</span>
+        <span class="action delete">Delete</span>
+      </div>
     </div>`
   })
 }
