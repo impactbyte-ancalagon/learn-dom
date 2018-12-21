@@ -1,14 +1,13 @@
-const DATA = [
-  {
-    text: "Eat breakfast",
-    completed: false
-  },
-  {
-    text: "Design a new app",
-    completed: false
-  },
-  {
-    text: "Go home after work",
-    completed: false
+const save = data => {
+  window.localStorage.setItem("todos", JSON.stringify(data))
+}
+
+const load = () => {
+  const data = JSON.parse(window.localStorage.getItem("todos"))
+
+  if (data) {
+    return data
+  } else {
+    return []
   }
-]
+}
