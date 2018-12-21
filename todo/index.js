@@ -12,6 +12,9 @@ const submit = event => {
 
   // Check whether the input has actual characters/words
   if (inputTodo.value.trim() !== "") {
+    // Get latest data
+    const DATA = load()
+
     // Push the new todo into global DATA
     DATA.push({
       text: inputTodo.value,
