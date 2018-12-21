@@ -11,6 +11,43 @@
   <body>
     <h1>DOM Events</h1>
 
+    <form id="guest-list">
+      <div>
+        <label for="full-name">Full Name:</label>
+        <input
+          id="guest-full-name"
+          type="text"
+          name="full-name"
+          placeholder="Full Name"
+        />
+      </div>
+      <div>
+        <label for="phone">Phone:</label>
+        <input
+          id="guest-phone"
+          type="tel"
+          name="phone"
+          placeholder="+62-8-1234-5678"
+        />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input
+          id="guest-email"
+          type="text"
+          name="email"
+          placeholder="yourname@mail.com"
+        />
+      </div>
+      <div><input type="submit" value="Submit" /></div>
+    </form>
+
+    <h3>Guests:</h3>
+    <ul id="output-ul"></ul>
+
+    <h3>Debug:</h3>
+    <pre id="output-code" class="output-code"></pre>
+
     <script src="index.js"></script>
   </body>
 </html>
