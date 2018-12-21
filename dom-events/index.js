@@ -32,7 +32,7 @@ const displayToPre = data => {
 }
 
 const displayToList = data => {
-  const guest = `${data.name} (${data.phone}) <${data.email}>`
+  const guest = `${data.name} (${data.phone}) &lt;${data.email}&gt;`
   ulOutput.innerHTML += `<li>${guest}</li>`
 }
 
