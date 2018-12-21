@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background: hsl(0, 0%, 0%);
+  padding: 5px 20px;
+  margin: 0;
+}
+
+.title {
+  color: hsl(58, 100%, 50%);
+  margin: 0;
+}
+
+.input-todo {
+  padding: 10px;
+  background: hsl(0, 0%, 93%);
+  border: 0;
+}
+
+.input-add {
+  background: hsl(0, 0%, 0%);
+  color: hsl(58, 100%, 50%);
+  border-radius: 5px;
+  border: 0;
+  padding: 4px 6px;
+  font-weight: 800;
+  text-transform: uppercase;
+}

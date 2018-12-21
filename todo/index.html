@@ -5,14 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Todo App</title>
+
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <div id="container">
-      <header><h1>Todo</h1></header>
+      <header id="header" class="header">
+        <h1 id="title" class="title">Todo</h1>
+      </header>
 
-      <form>
-        <input type="text" placeholder="Insert your todo" />
-        <input type="submit" value="Add" />
+      <form id="input" class="input">
+        <input
+          id="input-todo"
+          class="input-todo"
+          type="text"
+          placeholder="Insert your todo"
+        />
+        <input id="input-add" class="input-add" type="submit" value="Add" />
       </form>
 
       <ul>
@@ -21,5 +30,7 @@
         <li>Go home after work</li>
       </ul>
     </div>
+
+    <script src="index.js"></script>
   </body>
 </html>
