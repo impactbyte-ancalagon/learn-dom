@@ -9,24 +9,26 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <main id="container">
-      <header id="header" class="header">
-        <h1 id="title" class="title">Todo</h1>
-      </header>
+    <div id="container" class="container">
+      <div id="app" class="app">
+        <header id="header" class="header">
+          <h1 id="title" class="title">Todo</h1>
+        </header>
 
-      <form id="input" class="input">
-        <input
-          id="input-todo"
-          class="input-todo"
-          type="text"
-          placeholder="What do you want to do?"
-        />
-        <input id="input-add" class="button" type="submit" value="Add" />
-        <input id="button-clear" class="button" type="button" value="Clear" />
-      </form>
+        <form id="input" class="input">
+          <input
+            id="input-todo"
+            class="input-todo"
+            type="text"
+            placeholder="What do you want to do?"
+          />
+          <input id="input-add" class="button" type="submit" value="Add" />
+          <input id="button-clear" class="button" type="button" value="Clear" />
+        </form>
 
-      <section id="output" class="output"><!-- OUTPUT --></section>
-    </main>
+        <section id="output" class="output"><!-- OUTPUT --></section>
+      </div>
+    </div>
 
     <script src="data.js"></script>
     <script src="index.js"></script>
